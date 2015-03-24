@@ -1,0 +1,167 @@
+ul, form {
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+body {
+	margin:0;
+	padding:20px 0;
+	background-color:#F1F1F1;
+}
+
+#content {
+	position: relative;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+#windowChat {
+	position:relative;
+	margin:0 auto;
+	width:400px;
+	height:600px;
+	border:2px solid #C6C6C6;
+	border-radius:3px;
+	box-shadow:3px 3px 20px #B0B0B0;
+}
+
+header {
+	height:40px;
+	background-color:#242021;
+	color:#EFC001;
+	size:12px;
+	line-height:40px;
+	font-family:"Arial", sans serif;
+	text-align:center;
+	padding-right:15px;
+	
+	
+}
+
+footer {
+	position:absolute;
+	height:50px;
+	width:100%;
+	bottom:0;
+	text-align:center;
+	box-sizing:border-box;
+}
+
+input {
+	height:50px;
+	font-size:20px;
+	background:#FFFFFF;
+	border:1px solid #CCCCCC;
+	margin:0;
+	outline:none;
+}
+
+input[type=text] {
+	width:300px;
+	padding-left:5px;
+}
+input[type=button] {
+	position:relative;
+	top:-1px;
+	width:100px;
+	background-color:#EFC001;
+	color:#242021;	
+}
+
+.msg {
+	position:relative;
+	height:50px;
+	width:295px;
+	font-size:15px;
+	font-family:"Arial", sans serif;
+	background-color:#FCBA34;
+	border-radius:10px;
+	margin-top:10px;
+	padding:5px;
+}
+.self .msg::after {
+   content:"";
+   position: absolute;
+   right:-8px;
+   top: 10px;
+   width: 0;
+   height: 0;
+   border: 5px solid #FCBA34;
+   border-right-color:transparent;
+   border-bottom-color:transparent;
+}
+
+.other .msg::after {
+   content:"";
+   position: absolute;
+   left: -8px;;
+   top: 10px;
+   width: 0;
+   height: 0;
+   border: 5px solid #FCBA34;
+   border-left-color:transparent;
+   border-bottom-color:transparent;
+}
+
+.self .pic::after {
+	box-shadow: 1px 1px 2px rgba(black, 0.2);
+}
+
+.self .pic {
+	float:right;
+}
+.other .pic {
+	float:left;
+}
+.self .msg {
+	float:left;
+}
+.other .msg {
+	float:right;
+}
+
+.pic {
+	 width:70px; 
+	 height:70px;
+	 margin: 5px;
+	 background-image:url("profile_avatar.png");
+	 background-repeat:no-repeat;
+}
+
+.pic img {
+	width:100%;
+	display:block;
+}
+
+#windowChat {
+	background-color:#F0F0F0;
+}
+
+#chatroom {
+	padding:5px;
+	height:510px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	box-sizing:border-box;
+}
+
+#chatroom li {
+	list-style:none;
+}
+
+.self, .other {
+	clear:both;
+}
+
+.date {
+	width:100%;
+	height:12px;
+	line-height:12px;
+	text-align:center;
+	clear:both;
+	font-size:10px;
+	color:#999999;
+}
